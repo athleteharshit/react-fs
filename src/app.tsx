@@ -1,4 +1,3 @@
-import './App.css';
 import RoutesManager from './setup/routes-manager/routes.manager';
 
 function App() {
