@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.3",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
@@ -11,11 +15,15 @@
     "@types/node": "^17.0.25",
     "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.2",
+    "axios": "^0.27.2",
     "env-cmd": "^10.1.0",
+    "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.0.8",
     "typescript": "^4.6.0",
     "web-vitals": "^2.1.0"
   },
@@ -27,7 +35,7 @@
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}'",
-    "build:staging": "env-cmd -f .env.staging yarn build",
+    "build:dev": "env-cmd -f .env.development yarn build",
     "build:prod": "env-cmd -f .env.production yarn build",
     "prepare": "husky install"
   },
@@ -61,7 +69,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.7.1",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "prettier": "^2.7.1"
   }
 }

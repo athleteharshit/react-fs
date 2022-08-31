@@ -30,6 +30,8 @@
     "no-shadow": "off",
     "react/jsx-no-target-blank": "off",
     "no-param-reassign": "off",
-    "import/no-cycle": "off"
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }
