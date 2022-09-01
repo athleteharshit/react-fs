@@ -1,7 +1,7 @@
-/* eslint-disable no-console */
 import { Box, Typography } from '@mui/material';
 import { useEffect } from 'react';
-import { fetchUserById, selectUser } from '../../redux/selector/user.slice';
+import { selectUser } from '../../redux/selector/select.user';
+import { fetchUserById } from '../../redux/slice/user.slice';
 import { useAppDispatch, useAppSelector } from '../../setup/store/hooks';
 
 function Posts() {

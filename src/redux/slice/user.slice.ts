@@ -1,6 +1,4 @@
-/* eslint-disable no-console */
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../../setup/store/store';
 import { User } from '../../services/user';
 import { IUser } from '../../pages/posts/models';
 
@@ -29,7 +27,5 @@ const usersSlice = createSlice({
     });
   },
 });
-
-export const selectUser = (state: RootState) => state.user;
 
 export default usersSlice.reducer;
