@@ -1,7 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import logger from 'redux-logger';
+import { Env } from '../../common/constants';
+import rootReducer from './root.reducer';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  devTools: Env.MODE !== 'production',
 });
 
 export type AppDispatch = typeof store.dispatch;

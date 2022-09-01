@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 import { Env } from '../../common/constants';
 
-const axiosInstance = axios.create({
+const axiosI = axios.create({
   baseURL: Env.BASE_URL,
   timeout: 5000,
 });
@@ -11,7 +11,7 @@ const requestHandler = (request: AxiosRequestConfig) => {
   return request;
 };
 
-axiosInstance.interceptors.request.use((request) => requestHandler(request));
+axiosI.interceptors.request.use((request) => requestHandler(request));
 
 const responseErrorHandler = (error: AxiosError) => {
   //* const originalRequest = error.config;
@@ -25,7 +25,7 @@ const responseErrorHandler = (error: AxiosError) => {
       // if (refreshToken.status === 200) {
       //   token = refreshToken.data.hashToken;
       //   localStorage.setItem('authToken', token);
-      //   return axiosInstance(originalRequest);
+      //   return axiosI(originalRequest);
       // }
     }
   } else if (error.request) {
@@ -41,9 +41,9 @@ const responseErrorHandler = (error: AxiosError) => {
   });
 };
 
-axiosInstance.interceptors.response.use(
+axiosI.interceptors.response.use(
   (response) => response,
   (error) => responseErrorHandler(error),
 );
 
-export default axiosInstance;
+export default axiosI;
